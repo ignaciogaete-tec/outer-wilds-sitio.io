@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Outer Wilds Explorers</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" 
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="main-header">
+  <div class="header-content">
+    <a href="index.html" class="logo">Outer Wilds Explorers</a>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Quiénes somos</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#extra">Bitácoras</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+    <section class="section page-header">
+        <h1>Contacto</h1>
+        <p class="section-description">
+            Envíanos tu teoría favorita, tu ruta más caótica o simplemente un saludo Hearthiano.
+        </p>
+    </section>
+
+    <section class="section">
+        <form 
+            class="contact-form" 
+            method="POST" 
+            action="https://aterbonus.dev/api/toys/forms"
+        >
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    maxlength="200"
+                    placeholder="Tu nombre o apodo de viajero"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail de contacto</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    maxlength="200"
+                    placeholder="tu@correo.com"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    required 
+                    maxlength="200"
+                    placeholder="Teoría, saludo, colaboración..."
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="content">Mensaje</label>
+                <textarea 
+                    id="content" 
+                    name="content" 
+                    required 
+                    maxlength="1000"
+                    rows="5"
+                    placeholder="Cuéntanos lo que quieras, sin spoilers si puedes :)"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Enviar transmisión</button>
+        </form>
+
+        <p class="hint">
+            Puedes revisar los envíos en 
+            <a href="https://aterbonus.dev/toys/forms" target="_blank" rel="noopener noreferrer">
+                https://aterbonus.dev/toys/forms
+            </a>.
+        </p>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <p>© 2025 Outer Wilds Explorers. “We’re all stardust in the end.”</p>
+</footer>
+</body>
+</html>
