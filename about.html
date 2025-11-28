@@ -12,40 +12,10 @@
     >
     <link rel="stylesheet" href="style.css" />
 </head>
-<script>
-  (function () {
-    const btn = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-
-    if (!btn || !nav) return;
-
-    btn.addEventListener('click', () => {
-      
-      nav.classList.toggle('open');
-    });
-
-   
-    nav.addEventListener('click', (e) => {
-      if (e.target.closest('a')) {
-        nav.classList.remove('open');
-      }
-    });
-  })();
-</script>
-</body>
-</html>
-
 <body>
-
-  <header class="main-header">
+    <header class="main-header">
   <div class="header-content">
-    <a href="index.html" class="logo">Outer Wilds Explorers</a>
-
-    
-    <button class="menu-toggle" aria-label="Abrir menú de navegación">
-      ☰
-    </button>
-
+    <a href="index.html" class="logo">LOGO Outer Wilds </a>
     <nav class="main-nav">
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
@@ -57,7 +27,6 @@
     </nav>
   </div>
 </header>
-
 
 <main>
     
@@ -193,6 +162,30 @@
 <footer class="main-footer">
     <p>© 2025 Outer Wilds Explorers. “The universe is a lot bigger than you think.”</p>
 </footer>
-    
+   
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.main-nav');
+      if (!btn || !nav) return;
+
+      btn.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      
+      nav.addEventListener('click', (e) => {
+        if (e.target.closest('a')) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+   
 </body>
 </html>
