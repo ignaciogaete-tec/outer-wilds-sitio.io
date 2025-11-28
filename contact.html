@@ -13,6 +13,7 @@
     >
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 <header class="main-header">
   <div class="header-content">
@@ -34,6 +35,28 @@
     </nav>
   </div>
 </header>
+<script>
+  (function () {
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      
+      nav.classList.toggle('open');
+    });
+
+
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        nav.classList.remove('open');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
 
 
 <main>
